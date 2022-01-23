@@ -23,7 +23,7 @@ function Form({
   }
   function handleSubmit(e) {
     e.preventDefault()
-    setTodos([...todos, {firstName:inputName, relation:inputRelation, phone:inputPhone}])
+    setTodos([...todos, {firstName:inputName, relation:inputRelation, phone:inputPhone, id:new Date}])
     setInputName('')
     setInputRelation('')
     setInputPhone('')
@@ -32,14 +32,14 @@ function Form({
     <div className="contact__forms col-md-6">
       <form onSubmit={handleSubmit} className="contact__form">
         <div className="contact__groupinp">
-        <input onChange={handleName} value={valueOne} className="form-control" type="text" placeholder="Name" />
-        <input onChange={handleRel} className="form-control" value={valueTwo} type="text" placeholder="Relationship" list="mylist" />
+        <input onChange={handleName} value={valueOne} className="form-control" type="text" placeholder="Name" required/>
+        <input onChange={handleRel} className="form-control" value={valueTwo} type="text" placeholder="Relationship" list="mylist" required/>
         <datalist id="mylist">
           <option>Family</option>
           <option>Freinds</option>
           <option>Relatives</option>
         </datalist>
-        <input onChange={handlePhone} value={valueThree} className="form-control" type="text" placeholder="Phone Number" list="num"/>
+        <input onChange={handlePhone} value={valueThree} className="form-control" type="text" placeholder="Phone Number" list="num" required/>
         <datalist id="num">
           <option>+998</option>
         </datalist>

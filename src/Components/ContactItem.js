@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactCss.css';
-function ContactItem({ name, relat, phone }) {
+function ContactItem({ name, relat, phone}) {
   return <li className="list-group-item">
     <h4 className="contact__title">{name}</h4>
     <p className="contact__relat">{relat}</p>

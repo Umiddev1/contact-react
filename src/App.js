@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <ContactBtn />
+        <ContactBtn todos={todos} setTodos={setTodos} />
         <div className="contact__biggr row">
         <Form 
         valueOne={inputName}
