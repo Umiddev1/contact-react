@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react'
+import Form from './Components/Form';
+import ContactList from './Components/ContactList';
+import './Components/ContactCss.css'
+import ContactBtn from './Components/ContactBtn';
 function App() {
+  const [inputName, setInputName] = useState('')
+  const [inputRelation, setInputRelation] = useState('')
+  const [inputPhone, setInputPhone] = useState('')
+  const [todos, setTodos] = useState([])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <ContactBtn />
+        <div className="contact__biggr row">
+        <Form 
+        valueOne={inputName}
+        valueTwo={inputRelation}
+        valueThree={inputPhone}
+        setInputName={setInputName} 
+        setInputRelation={setInputRelation} 
+        setInputPhone={setInputPhone} 
+        todos={todos}
+        setTodos={setTodos} 
+        inputName={inputName}
+        inputRelation={inputRelation}
+        inputPhone={inputPhone}
+        />
+        <ContactList todos={todos} />
+        </div>
+      </div>
     </div>
   );
 }

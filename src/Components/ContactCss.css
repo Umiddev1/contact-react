@@ -1,0 +1,63 @@
+.contact__groupinp {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.contact__biggr {
+  position: relative;
+  top: 200px;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+.list-group-item {
+  padding-bottom: 20px;
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes slideInRight {
+  0% {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+} 
+.contact__title {
+  font-size: 25px;
+  font-weight: 700;
+}
+.contact__relat {
+  font-size: 16px;
+  font-weight: 600;
+}
+.contact__phone {
+  padding: 5px 10px;
+  border-radius: 24px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.contact__phone:hover {
+  background-color: #fff !important;
+  color: green !important;
+  border-color: green;
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 90px;
+}
+.bt {
+  margin-right: 10px;
+}
